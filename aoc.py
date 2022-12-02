@@ -4,6 +4,11 @@ import sys
 import os
 import stat
 
+headers = {
+    'User-Agent': 'AoC grabber github.com/msturm/aoc2022',
+    'From': 'msturm@wolkje.net'  # This is another valid field
+}
+
 if len(sys.argv) < 2:
     print("Missing parameter\nUsage: aoc.py [day]")
     sys.exit(1)
@@ -27,7 +32,7 @@ url = 'https://adventofcode.com/' + str(year) + '/day/' + str(day) + '/input'
 cookies = dict(session = session)
 
 print(url)
-r = requests.get(url, allow_redirects=True, cookies = cookies)
+r = requests.get(url, allow_redirects=True, cookies = cookies, headers = headers)
 open(day + '.in', 'wb').write(r.content)
 
 pythonfile = str(day) + '.py'
