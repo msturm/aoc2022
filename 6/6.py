@@ -29,7 +29,6 @@ start = 0
 n = 0
 while n < len(input):
     x = input[n]
-    print(n, x)
     if x in recent2:
         start = start + 1
         n = start
