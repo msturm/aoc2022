@@ -48,45 +48,8 @@ for r in range(0, max_c):
             while c + d < max_c - 1 and G[(r, c + d)] < cv:
                 d += 1
             sc *= d
-            # dr = r + 1
-            # while dr < max_r - 1 and vis:
-            #     if G[dr, c] < cv:
-            #         dr += 1    
-            #     else:
-            #         vis = False
-            # sc = (dr - r)
-
-            # vis = True
-            # dr = r - 1
-            # while dr > 0 and vis:
-            #     if G[dr, c] < cv:
-            #         dr -= 1    
-            #     else:
-            #         vis = False
-            # sc *= (r - dr)
-
-
-            # vis = True
-            # dc = c + 1
-            # while dc < max_c - 1 and vis:
-            #     if G[r, dc] < cv:
-            #         dc += 1    
-            #     else:
-            #         vis = False
-            # sc *= (dc - c)
-
-            # vis = True
-            # dc = c-1
-            # while dc > 0 and vis:
-            #     if G[r, dc] < cv:
-            #         dc -= 1    
-            #     else:
-            #         vis = False
-            # sc *= (c - dc)
+          
             max_sc = max(sc, max_sc)
 
-        # else:
-            # print(r, c, G[r,c], "not visible")
-
-print(visible)
-print(max_sc)
+print("part1", visible)
+print("part2", max_sc)
