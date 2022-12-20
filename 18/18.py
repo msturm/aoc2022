@@ -51,12 +51,6 @@ def is_inside(x, y, z):
         INSIDE.add(p)
     return True
 
-    # if all([(x+dx, y+dy, z+dz) in G for (dx, dy, dz) in D]):
-    #     airdrops.add((x, y, z))
-    # for (dx, dy, dz) in D:
-    #     if (x+dx, y+dy, z+dz) in AB:
-    #         print('maybe bigger airdrop', x+dx,y+dy,z+dz)
-
 
 part2 = 0
 for (x, y, z) in G:
