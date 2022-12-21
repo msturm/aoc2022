@@ -108,9 +108,9 @@ for v in input:
     Blueprints[blueprint_id] = (ore_robot_costs, clay_robot_costs, obsidian_robot_costs, geode_robot_costs)
 
 p1 = 0
-# for x in Blueprints:
-    # p1 += x*simulate_robot(x, Blueprints[x], 24)
-# print("p1", p1)
+for x in Blueprints:
+    p1 += x*simulate_robot(x, Blueprints[x], 24)
+print("p1", p1)
 p2 = 1
 # print(simulate_robot(1, Blueprints[1], 32))
 for x in list(Blueprints.keys())[0:3]:
